@@ -31,7 +31,11 @@ public class Rental {
 	// step 01: remove switch statements smell, move getLineAmount to rental
 	// step 02: remove switch statements smell, move getLineAmount to Movie and remove switch statements smell
 	public int getLineAmount() {
-		return movie.getLineAmount(getDaysRented());
+		return movie.getLineAmount(daysRented);
+	}
+
+	public int getBonusPoints() {
+		return movie.getBonusPoints(daysRented);
 	}
 
 }

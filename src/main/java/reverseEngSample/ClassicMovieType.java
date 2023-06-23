@@ -18,4 +18,9 @@ public class ClassicMovieType extends MovieType {
 
         return lineAmount;
     }
+
+    @Override
+    public int getBonusPoints(int daysRented) {
+        return 1;
+    }
 }

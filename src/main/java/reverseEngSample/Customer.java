@@ -28,8 +28,9 @@ public class Customer {
 
 			// step 01: remove switch statements smell, move getLineAmount to rental
 			lineAmount += rent.getLineAmount();
-			bonusPoints++;
-			if ((rent.getMovie().getPriceCode() == MovieType.RELEASE) && (rent.getDaysRented() > 1)) bonusPoints++;
+
+			// step 03: movie calc bonus points logic to Movie
+			bonusPoints += rent.getBonusPoints();
 
 			rentalList += rent.getMovie().getName() + "\t" + lineAmount + "\n";
 			totalAmount += lineAmount;

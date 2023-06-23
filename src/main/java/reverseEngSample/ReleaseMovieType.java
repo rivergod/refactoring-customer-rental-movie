@@ -15,4 +15,11 @@ public class ReleaseMovieType extends MovieType {
 
         return lineAmount;
     }
+
+    @Override
+    public int getBonusPoints(int daysRented) {
+        int bonusPoints = 1;
+        if (daysRented > 1) bonusPoints++;
+        return bonusPoints;
+    }
 }

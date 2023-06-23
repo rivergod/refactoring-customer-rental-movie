@@ -33,4 +33,10 @@ public class Movie {
 	public int getLineAmount(int daysRented) {
 		return movieType.getLineAmount(daysRented);
 	}
+
+	// step 03: movie calc bonus points logic to Movie
+	public int getBonusPoints(int daysRented) {
+		return movieType.getBonusPoints(daysRented);
+	}
+
 }
