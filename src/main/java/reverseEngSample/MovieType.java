@@ -17,8 +17,6 @@ public abstract class MovieType {
         }
     }
 
-    public abstract int getPriceCode();
-
     public abstract int getLineAmount(int daysRented);
 
     public abstract int getBonusPoints(int daysRented);

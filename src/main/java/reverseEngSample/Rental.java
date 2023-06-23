@@ -4,16 +4,9 @@ public class Rental {
 	private int daysRented;
 	private Movie movie;
 
-	Rental() {
-	}
-
 	public Rental(int days, Movie myMovie) {
 		setMovie(myMovie);
 		setDaysRented(days);
-	}
-
-	public int getDaysRented() {
-		return this.daysRented;
 	}
 
 	private void setDaysRented(int daysRented) {

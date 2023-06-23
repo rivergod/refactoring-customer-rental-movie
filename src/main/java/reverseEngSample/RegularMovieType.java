@@ -3,10 +3,6 @@ package reverseEngSample;
 public class RegularMovieType extends MovieType {
 
     @Override
-    public int getPriceCode() {
-        return MovieType.REGULAR;
-    }
-    @Override
     public int getLineAmount(int daysRented) {
         int lineAmount = 0;
 
