@@ -18,26 +18,36 @@ public class Customer {
 		return this.name;
 	}
 
+	// step 04:  divide calc logics : long method
 	public String statement() {
+
 		String rentalList = "Statement\n";
-		int totalAmount = 0;
-		int bonusPoints = 0;
-
 		for (Rental rent : rentals) {
-			int lineAmount = 0;
+			rentalList += rent.getMovie().getName() + "\t" + rent.getLineAmount() + "\n";
+		}
+		rentalList += "Total\t" + calcTotalAmount() + "\n";
+		rentalList += "Bonus Point:\t" + calcBonusPoints() + "\n";
+		return rentalList;
+	}
 
-			// step 01: remove switch statements smell, move getLineAmount to rental
-			lineAmount += rent.getLineAmount();
-
+	// step 04:  divide calc logics : long method
+	private int calcBonusPoints() {
+		int bonusPoints = 0;
+		for (Rental rent : rentals) {
 			// step 03: movie calc bonus points logic to Movie
 			bonusPoints += rent.getBonusPoints();
-
-			rentalList += rent.getMovie().getName() + "\t" + lineAmount + "\n";
-			totalAmount += lineAmount;
 		}
-		rentalList += "Total\t" + totalAmount + "\n";
-		rentalList += "Bonus Point:\t" + bonusPoints + "\n";
-		return rentalList;
+		return bonusPoints;
+	}
+
+	// step 04:  divide calc logics : long method
+	private int calcTotalAmount() {
+		int totalAmount = 0;
+		for (Rental rent : rentals) {
+			// step 01: remove switch statements smell, move getLineAmount to rental
+			totalAmount += rent.getLineAmount();
+		}
+		return totalAmount;
 	}
 
 }
