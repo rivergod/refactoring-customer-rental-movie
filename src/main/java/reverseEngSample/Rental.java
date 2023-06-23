@@ -28,27 +28,10 @@ public class Rental {
 		this.movie = movie;
 	}
 
-	// step 01: remove switch smell, move getLineAmount to rental
+	// step 01: remove switch statements smell, move getLineAmount to rental
+	// step 02: remove switch statements smell, move getLineAmount to Movie and remove switch statements smell
 	public int getLineAmount() {
-		int lineAmount = 0;
-
-		switch (getMovie().getPriceCode()) {
-			case Movie.REGULAR:
-				lineAmount += 2000;
-				if (getDaysRented() > 2) {
-					lineAmount += (getDaysRented() - 2) * 1500;
-				}
-				break;
-			case Movie.CLASSIC:
-				lineAmount += 1500;
-				if (getDaysRented() > 3) {
-					lineAmount += (getDaysRented() - 3) * 1500;
-				}
-				break;
-			case Movie.RELEASE:
-				lineAmount += (getDaysRented() * 3000);
-				break;
-		}
-		return lineAmount;
+		return movie.getLineAmount(getDaysRented());
 	}
+
 }

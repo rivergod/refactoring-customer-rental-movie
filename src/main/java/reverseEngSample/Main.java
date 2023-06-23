@@ -15,25 +15,25 @@ public class Main {
 
 				Customer me = new Customer("DO");
 
-				me.addRental(new Rental(1, new Movie("Movie1", Movie.CLASSIC)));
-				me.addRental(new Rental(1, new Movie("Movie2", Movie.REGULAR)));
-				me.addRental(new Rental(1, new Movie("Movie3", Movie.RELEASE)));
+				me.addRental(new Rental(1, new Movie("Movie1", MovieType.CLASSIC)));
+				me.addRental(new Rental(1, new Movie("Movie2", MovieType.REGULAR)));
+				me.addRental(new Rental(1, new Movie("Movie3", MovieType.RELEASE)));
 
-				me.addRental(new Rental(2, new Movie("Movie1", Movie.CLASSIC)));
-				me.addRental(new Rental(2, new Movie("Movie2", Movie.REGULAR)));
-				me.addRental(new Rental(2, new Movie("Movie3", Movie.RELEASE)));
+				me.addRental(new Rental(2, new Movie("Movie1", MovieType.CLASSIC)));
+				me.addRental(new Rental(2, new Movie("Movie2", MovieType.REGULAR)));
+				me.addRental(new Rental(2, new Movie("Movie3", MovieType.RELEASE)));
 
-				me.addRental(new Rental(3, new Movie("Movie1", Movie.CLASSIC)));
-				me.addRental(new Rental(3, new Movie("Movie2", Movie.REGULAR)));
-				me.addRental(new Rental(3, new Movie("Movie3", Movie.RELEASE)));
+				me.addRental(new Rental(3, new Movie("Movie1", MovieType.CLASSIC)));
+				me.addRental(new Rental(3, new Movie("Movie2", MovieType.REGULAR)));
+				me.addRental(new Rental(3, new Movie("Movie3", MovieType.RELEASE)));
 
-				me.addRental(new Rental(4, new Movie("Movie1", Movie.CLASSIC)));
-				me.addRental(new Rental(4, new Movie("Movie2", Movie.REGULAR)));
-				me.addRental(new Rental(4, new Movie("Movie3", Movie.RELEASE)));
+				me.addRental(new Rental(4, new Movie("Movie1", MovieType.CLASSIC)));
+				me.addRental(new Rental(4, new Movie("Movie2", MovieType.REGULAR)));
+				me.addRental(new Rental(4, new Movie("Movie3", MovieType.RELEASE)));
 
-				me.addRental(new Rental(5, new Movie("Movie1", Movie.CLASSIC)));
-				me.addRental(new Rental(5, new Movie("Movie2", Movie.REGULAR)));
-				me.addRental(new Rental(5, new Movie("Movie3", Movie.RELEASE)));
+				me.addRental(new Rental(5, new Movie("Movie1", MovieType.CLASSIC)));
+				me.addRental(new Rental(5, new Movie("Movie2", MovieType.REGULAR)));
+				me.addRental(new Rental(5, new Movie("Movie3", MovieType.RELEASE)));
 
 				me.statement();
 

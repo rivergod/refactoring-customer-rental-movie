@@ -26,10 +26,10 @@ public class Customer {
 		for (Rental rent : rentals) {
 			int lineAmount = 0;
 
-			// step 01: remove switch smell, move getLineAmount to rental
+			// step 01: remove switch statements smell, move getLineAmount to rental
 			lineAmount += rent.getLineAmount();
 			bonusPoints++;
-			if ((rent.getMovie().getPriceCode() == Movie.RELEASE) && (rent.getDaysRented() > 1)) bonusPoints++;
+			if ((rent.getMovie().getPriceCode() == MovieType.RELEASE) && (rent.getDaysRented() > 1)) bonusPoints++;
 
 			rentalList += rent.getMovie().getName() + "\t" + lineAmount + "\n";
 			totalAmount += lineAmount;
